@@ -1,0 +1,43 @@
+<html>
+
+ <head>
+
+  <!-- include A-Frame -->
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <!-- include ar.js for A-Frame -->
+
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+ </head>
+
+ <body style="margin: 0px; overflow: hidden;">
+
+  <a-scene embedded arjs>
+
+   <!-- Lighting to enhance the 3D feel -->
+
+   <a-light type="directional" position="1 1 1" intensity="1.5"></a-light>
+
+   <a-light type="ambient" color="#fff"></a-light>
+
+    
+
+   <!-- Textured Spheres -->
+
+   <a-asset
+    position="0 1.6 0" 
+    src="Mando suit v13.usdz"
+    animation="property: position; to: 0 1.8 0; dur: 2500; easing: easeInOutQuad; dir: alternate; loop: true"></a-asset>
+
+
+   <!-- Define a camera which will move according to the marker position -->
+
+   <a-marker-camera preset="hiro"></a-marker-camera>
+
+  </a-scene>
+
+ </body>
+
+</html>
